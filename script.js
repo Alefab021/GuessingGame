@@ -27,8 +27,10 @@ const updateScore = winner => {
 
 function advanceRound () {
     currentRoundNumber += 1;
+    return currentRoundNumber;
 }
 
+for(var i; i < 10; i++) {
 let winner = compareGuesses(7, 3, generateTarget());
 if (winner === true){
     winner = 'human';
@@ -41,3 +43,4 @@ let round = advanceRound();
 console.log(round);
 console.log(`winner of the ${currentRoundNumber} round is ${winner}`);
 console.log(`secret number is ${generateTarget()}`);
+}
